@@ -1,0 +1,39 @@
+<!--<div *ngFor="let livro of livros" class="container">-->
+<!--  <mat-grid-list  *ngFor="let livro of livros" cols="3" rowHeight="200" >-->
+<!--      <mat-card class="example-card">-->
+<!--        <mat-card-title-group>-->
+<!--          <mat-card-title>{{ livro.title }}</mat-card-title>-->
+
+<!--          <mat-card-subtitle>{{ livro.author}}</mat-card-subtitle>-->
+<!--&lt;!&ndash;          <mat-card-subtitle>{{ personagem.origin.name }}</mat-card-subtitle>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <img mat-card-sm-image src={{personagem.image}} >&ndash;&gt;-->
+<!--        </mat-card-title-group>-->
+<!--        &lt;!&ndash;  <mat-card-content>&ndash;&gt;-->
+<!--        &lt;!&ndash;    aaaaaaaaa&ndash;&gt;-->
+<!--        &lt;!&ndash;  </mat-card-content>&ndash;&gt;-->
+<!--      </mat-card>-->
+
+<!--  </mat-grid-list>-->
+<!--</div>-->
+<div *ngFor="let livro of livros" class="Acontainer">
+
+<!--  <div class="cardContainer">-->
+<!--    <div class="card">-->
+<!--      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">-->
+<!--&lt;!&ndash;      <div class="CardDesc">&ndash;&gt;-->
+
+<!--        <h4>{{ livro.title.slice(0,12)}}</h4>-->
+
+<!--        <p>{{ livro.author}}</p>-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+  <div class="card">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.9BFUQIciXAp_g-0Vhs1JxQDQEr%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
+    <div class="container">
+      <h4><b>{{ livro.title.slice(0,30)}}</b></h4>
+      <p>{{ livro.author}}</p>
+    </div>
+  </div>
+</div>

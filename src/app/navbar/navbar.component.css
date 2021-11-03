@@ -1,0 +1,10 @@
+.espaco{
+    flex: 1 1 auto;
+}
+.mat-elevation-z6{
+  background-color: black;
+}
+#login{
+  background-color: #785497;
+  color: white;
+}
