@@ -1,22 +1,22 @@
 <div class="center">
     <h1>Cadastrar um Livro</h1>
-    <form method="post">
+    <form [formGroup]="livrosForm">
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" formControlName="title">
         <span></span>
         <label>Nome do Livro</label>
       </div>
       <div class="txt_field">
-        <input type="text" required>
+        <input type="text" formControlName="author" required>
         <span></span>
         <label>Nome do Autor</label>
       </div>
       <div class="arquivo">
         <label>Arquivo</label>
         <span></span>
-        <input type="file" required>
+        <input type="file">
       </div>
-      <input type="submit" value="Registrar">
+      <button type="button" (click)="adicionarLivro()">Registrar</button>
       <div class="familia">
         Lembre-se de enviar o arquivo em PDF!
       </div>
