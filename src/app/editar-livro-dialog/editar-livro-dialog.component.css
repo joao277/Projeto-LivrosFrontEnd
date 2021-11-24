@@ -1,0 +1,22 @@
+.form{
+  flex: 1;
+  display: inline-block;
+}
+input{
+  margin: 10px;
+  padding: 10px;
+}
+
+.InputBookName{
+
+}
+
+.inputAuthor{
+
+}
+
+.buttonConfirm{
+  color: white;
+  background-color: #87C38F;
+}
+

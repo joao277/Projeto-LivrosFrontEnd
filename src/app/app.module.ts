@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule  } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,9 +15,14 @@ import { LivrosComponent } from './livros/livros.component';
 import { HomeComponent } from './home/home.component'
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { CriarcontaComponent } from './criarconta/criarconta.component';
+import {EditarLivroDialogComponent} from "./editar-livro-dialog/editar-livro-dialog.component";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 
@@ -30,7 +35,8 @@ import { CriarcontaComponent } from './criarconta/criarconta.component';
     RegislivroComponent,
     LivrosComponent,
     HomeComponent,
-    CriarcontaComponent
+    CriarcontaComponent,
+    EditarLivroDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +48,10 @@ import { CriarcontaComponent } from './criarconta/criarconta.component';
     MatGridListModule,
     MatCardModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    FormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

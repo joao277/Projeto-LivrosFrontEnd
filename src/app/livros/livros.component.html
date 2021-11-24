@@ -24,6 +24,10 @@
       <h4><b>{{ livro.title.slice(0,30)}}</b></h4>
       <p id="authorText">{{ livro.author}}</p>
     </div>
-    <button id="botaoExcluir" (click)="excluirLivro(livro.id)">Apagar</button>
+    <div class="buttons">
+      <button id="deleteButton" (click)="excluirLivro(livro.id)">Apagar</button>
+<!--      <button id="editButton" (click)="editarLivro(livro.id, livro.id)">Editar</button>-->
+      <button id="editButton" (click)="openDialog(livro.id)">Editar</button>
+    </div>
   </div>
 </div>
