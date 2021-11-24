@@ -6,12 +6,13 @@ import { LivrosComponent } from './livros/livros.component';
 import { LoginComponent } from './login/login.component';
 import { RegislivroComponent } from './regislivro/regislivro.component';
 import { CriarcontaComponent } from './criarconta/criarconta.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   //{ path: 'home' , component: HomeComponent },
-  { path: '' , component: LivrosComponent },
-  { path: 'livros' , component: LivrosComponent },
-  { path: 'regislivro' , component: RegislivroComponent },
+  { path: '' , component: LivrosComponent, canActivate: [AuthGuard] },
+  { path: 'livros' , component: LivrosComponent, canActivate: [AuthGuard] },
+  { path: 'regislivro' , component: RegislivroComponent, canActivate: [AuthGuard] },
   { path: 'login' , component: LoginComponent },
   { path: 'criarconta' , component: CriarcontaComponent}
 ];
