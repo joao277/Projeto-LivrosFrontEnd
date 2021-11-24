@@ -18,7 +18,10 @@
 <!--      />-->
 
     <form [formGroup]="formulario" (ngSubmit)="editarLivro(data.idLivro)">
+        <label for="title">Título</label>
+        <br>
         <input
+          id="title"
           type="text"
           class="InputBookName"
           placeholder="Nome do livro"
@@ -26,7 +29,10 @@
           [(ngModel)]="data.nome"
         />
       <br>
+      <label for="author">Autor</label>
+      <br>
       <input
+        id="author"
         type="text"
         class="inputAuthor"
         placeholder="Autor"
