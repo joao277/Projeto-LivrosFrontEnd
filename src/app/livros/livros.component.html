@@ -18,22 +18,12 @@
 <!--</div>-->
 <div *ngFor="let livro of livros" class="Acontainer">
 
-<!--  <div class="cardContainer">-->
-<!--    <div class="card">-->
-<!--      <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style="width:100%">-->
-<!--&lt;!&ndash;      <div class="CardDesc">&ndash;&gt;-->
-
-<!--        <h4>{{ livro.title.slice(0,12)}}</h4>-->
-
-<!--        <p>{{ livro.author}}</p>-->
-<!--&lt;!&ndash;      </div>&ndash;&gt;-->
-<!--    </div>-->
-<!--  </div>-->
   <div class="card">
     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.9BFUQIciXAp_g-0Vhs1JxQDQEr%26pid%3DApi&f=1" alt="Avatar" style="width:100%">
     <div class="container">
       <h4><b>{{ livro.title.slice(0,30)}}</b></h4>
-      <p>{{ livro.author}}</p>
+      <p id="authorText">{{ livro.author}}</p>
     </div>
+    <button id="botaoExcluir" (click)="excluirLivro(livro.id)">Apagar</button>
   </div>
 </div>

@@ -12,4 +12,8 @@ export class ListarLivrosService {
   listarLivros(): Observable<any>{
     return this.http.get("http://localhost:4000/api/books");
   }
+
+  excluirLivro(idLivro:number): Observable<any>{
+    return this.http.delete(`http://localhost:4000/api/books/${idLivro}`);
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ListarLivrosService} from "./listar-livros.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-livros',
@@ -15,7 +16,7 @@ export class LivrosComponent implements OnInit {
       "author": ""
     }];
 
-  constructor(private  listarLivrosService: ListarLivrosService) { }
+  constructor(private  listarLivrosService: ListarLivrosService, private router: Router) { }
 
   ngOnInit(): void {
     this.carregarLivros();
@@ -27,5 +28,20 @@ export class LivrosComponent implements OnInit {
       this.livros = value;
       console.log(this.livros)
     })
+  }
+
+  excluirLivro(id:number){
+    this.listarLivrosService.excluirLivro(id).subscribe(value => {
+
+      console.log(value);
+
+
+    });
+    alert('O livro foi excluido!');
+    // this.router.navigate(['/livros']);
+    this.carregarLivros();
+    // window.location.reload()
+    this.router.navigateByUrl('/livros');
+
   }
 }

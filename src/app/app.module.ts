@@ -19,6 +19,9 @@ import {MatCardModule} from "@angular/material/card";
 import { HttpClientModule } from '@angular/common/http';
 import { CriarcontaComponent } from './criarconta/criarconta.component';
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
