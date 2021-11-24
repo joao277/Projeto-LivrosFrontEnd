@@ -1,20 +1,14 @@
 <div class="center">
-    <h1>Login</h1>
-    <form method="post">
-      <div class="txt_field">
-        <input type="text" required>
-        <span></span>
-        <label>Nome de Usuario</label>
-      </div>
-      <div class="txt_field">
-        <input type="password" required>
-        <span></span>
-        <label>Senha</label>
-      </div>
-      <input type="submit" value="Login">
-      <div class="signup_link">
-        Não possui uma conta? <a href="criarconta">Criar Conta</a>
-      </div>
-    </form>
-  </div>
+    <div *ngIf="auth.user$ | async as user; else login">
+      <!-- {{ user | json }} -->
+      <p>{{user.displayName}}</p>
+      <p>{{user.email}}</p>
+      <img src={{user.photoURL}} alt="Imagem de perfil">
+      <br>
+      <button class="button" (click)="auth.signOut()">Sair</button>
+    </div>
 
+    <ng-template #login>
+      <button class="button" (click)="auth.googleSignIn()">Entre com sua conta Google</button>
+    </ng-template>
+</div>
