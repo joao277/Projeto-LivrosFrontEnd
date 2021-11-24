@@ -7,6 +7,8 @@ import {Router} from "@angular/router";
 
 export interface DialogData {
   idLivro: number;
+  nome: string;
+  autor: string;
 }
 
 

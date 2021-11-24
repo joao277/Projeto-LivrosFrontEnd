@@ -12,6 +12,7 @@ import {MatSnackBar} from "@angular/material/snack-bar";
 })
 export class LivrosComponent implements OnInit {
 
+
   livros = [
     {
       "id": 1,
@@ -61,10 +62,10 @@ export class LivrosComponent implements OnInit {
 
   }
 
-  openDialog(idLivro: number): void {
+  openDialog(idLivro: number, nome:string, author: string): void {
     const dialogRef = this.dialog.open(EditarLivroDialogComponent, {
       width: '500px',
-      data: {idLivro: idLivro}
+      data: {idLivro: idLivro, nome: nome, autor: author}
 
     });
 
