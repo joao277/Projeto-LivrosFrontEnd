@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Informações que deseja editar</h1>
+  <div mat-dialog-content >
+<!--    <p>{{ data.idLivro }}</p>-->
+<!--
+<!--      <input-->
+<!--        type="text"-->
+<!--        class="InputBookName"-->
+<!--        placeholder="Nome do livro"-->
+<!--        [(ngModel)]="nomeLivro"-->
+<!--      />-->
+<!--    <br>-->
+<!--      <input-->
+<!--        type="text"-->
+<!--        class="inputAuthor"-->
+<!--        placeholder="autor"-->
+<!--        [(ngModel)]="autor"-->
+
+<!--      />-->
+
+    <form [formGroup]="formulario" (ngSubmit)="editarLivro(data.idLivro)">
+        <input
+          type="text"
+          class="InputBookName"
+          placeholder="Nome do livro"
+          formControlName="nomeLivro"
+        />
+      <br>
+      <input
+        type="text"
+        class="inputAuthor"
+        placeholder="Autor"
+        formControlName="autor"
+      />
+    </form>
+  </div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+  <button mat-flat-button class="buttonConfirm" (click)="editarLivro(data.idLivro)">Confirmar</button>
+
+
+<!--  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>-->
+</div>

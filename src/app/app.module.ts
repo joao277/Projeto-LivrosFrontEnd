@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule  } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AngularFireModule } from '@angular/fire/compat';
@@ -20,9 +20,17 @@ import { LivrosComponent } from './livros/livros.component';
 import { HomeComponent } from './home/home.component'
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
+import {MatDialogModule} from '@angular/material/dialog';
+
+
 
 import { HttpClientModule } from '@angular/common/http';
 import { CriarcontaComponent } from './criarconta/criarconta.component';
+import {EditarLivroDialogComponent} from "./editar-livro-dialog/editar-livro-dialog.component";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
+
+
+
 
 @NgModule({
   declarations: [
@@ -32,7 +40,8 @@ import { CriarcontaComponent } from './criarconta/criarconta.component';
     RegislivroComponent,
     LivrosComponent,
     HomeComponent,
-    CriarcontaComponent
+    CriarcontaComponent,
+    EditarLivroDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +54,9 @@ import { CriarcontaComponent } from './criarconta/criarconta.component';
     MatCardModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDialogModule,
+    FormsModule,
+    MatSnackBarModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyCjvBi2RsfOFfriYJz9tmP_SEYXFs-Db4Y",
       authDomain: "maislivros-7c81e.firebaseapp.com",
