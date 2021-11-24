@@ -31,54 +31,22 @@
   box-sizing: border-box;
 }
 
-form .txt_field{
+.txt_field{
   position: relative;
   border-bottom: 2px solid #785497;
   margin: 30px 0;
-}
-
-.txt_field input{
-  width: 100%;
-  padding: 0 5px;
-  height: 40px;
-  font-size: 16px;
-  border: none;
-  background: none;
-  outline: none;
-  color: darkgray;
-}
-
-.txt_field label{
-  position: absolute;
   top: 50%;
   left: 5px;
   color: #785497;
-  transform: translateY(-50%);
-  font-size: 16px;
-  pointer-events: none;
-  transition: .5s;
-}
-.txt_field span::before{
-  content: '';
-  position: absolute;
-  top: 40px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: darkslateblue;
-  transition: .5s;
-}
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label{
-  top: -5px;
-  color: darkslateblue;
-}
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before{
-  width: 100%;
+  font-size: 20px;
 }
 
-input[type="submit"]{
+.img_login{
+  position: relative;
+  left: 30%;
+}
+
+button{
   width: 100%;
   height: 50px;
   border: 1px solid;
@@ -90,20 +58,15 @@ input[type="submit"]{
   cursor: pointer;
   outline: none;
 }
-input[type="submit"]:hover{
+
+button:hover{
   border-color: darkslateblue;
   transition: .5s;
 }
-.signup_link{
+
+.familia{
   margin: 30px 0;
   text-align: center;
   font-size: 16px;
   color: #666666;
-}
-.signup_link a{
-  color: #2691d9;
-  text-decoration: none;
-}
-.signup_link a:hover{
-  text-decoration: underline;
 }
