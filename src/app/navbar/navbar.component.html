@@ -3,8 +3,12 @@
     <span>Mais livros</span>
 
     <div class="espaco"></div>
-    <!--<a mat-button routerLink='home'>Home</a>-->
     <a mat-button routerLink='livros'>Livros</a>
     <a mat-button routerLink='regislivro'>Registrar um Livro</a>
-    <a mat-raised-button id="login" routerLink='login'>Login</a>
+    <a routerLink='login' *ngIf="auth.user$ | async as user; else login">
+      <img src={{user.photoURL}} alt="Imagem de perfil" class="profilePhoto">
+    </a>
+    <ng-template #login>
+      <a mat-raised-button id="login" routerLink='login'>Login</a>
+    </ng-template>
 </mat-toolbar>
