@@ -2,6 +2,11 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule  } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -39,7 +44,19 @@ import { CriarcontaComponent } from './criarconta/criarconta.component';
     MatGridListModule,
     MatCardModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyCjvBi2RsfOFfriYJz9tmP_SEYXFs-Db4Y",
+      authDomain: "maislivros-7c81e.firebaseapp.com",
+      projectId: "maislivros-7c81e",
+      storageBucket: "maislivros-7c81e.appspot.com",
+      messagingSenderId: "292281721348",
+      appId: "1:292281721348:web:ddc5242b450d7a79aa8b51",
+      measurementId: "G-83JZHY4WKY"
+    }),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
