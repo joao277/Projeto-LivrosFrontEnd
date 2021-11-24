@@ -8,3 +8,9 @@
   background-color: #785497;
   color: white;
 }
+
+.profilePhoto {
+  height: 32px;
+  width: 32px;
+  border-radius: 8px;
+}
