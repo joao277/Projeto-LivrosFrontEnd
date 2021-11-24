@@ -23,6 +23,7 @@
           class="InputBookName"
           placeholder="Nome do livro"
           formControlName="nomeLivro"
+          [(ngModel)]="data.nome"
         />
       <br>
       <input
@@ -30,6 +31,7 @@
         class="inputAuthor"
         placeholder="Autor"
         formControlName="autor"
+        [(ngModel)]="data.autor"
       />
     </form>
   </div>
